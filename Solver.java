@@ -1,6 +1,6 @@
 public class Solver {
     public static void main(String[] args) {
-        System.out.println(solve("(276 + (23 + (2 - 4)))"));
+        System.out.println(solve("(-276 + (23 + (2 - 4)))"));
     }
 
     public static String solve(String expression) {
@@ -115,7 +115,7 @@ public class Solver {
             expression = expression.substring(0, x + 1) + z + expression.substring(y, expression.length());
         }
 
-        while (expression.contains("-")) {
+        while (expression.contains("- ")) {
             String first = ""; String second = "";
             int i = expression.indexOf("-"); int x = i - 2; int y = i + 2;
             while (x >= 0) {
